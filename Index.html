@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><rect width="128" height="128" rx="26" fill="#b7ff35"/><path d="M18 52h12v24H18zM35 38h12v52H35zM81 38h12v52H81zM98 52h12v24H98zM47 58h34v12H47z" 
+fill="#091008"/></svg>{
+  "name": "GymBro Pro — PT Studio Manager",
+  "short_name": "GymBro Pro",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#080d0b",
+  "theme_color": "#080d0b",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
+const C='gymbro-v1',F=['./','./index.html','./manifest.webmanifest','./icon.svg'];self.addEventListener('install',e=>e.waitUntil(caches.open(C).then(c=>c.addAll(F))));self.addEventListener('fetch',e=>{if(e.request.method==='GET')e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)))})
